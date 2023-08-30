@@ -31,7 +31,8 @@ onePassItem="OpenVPN Connect"
 Your `onePassItem` entry for the VPN must have OTP code assigned to it.
 
 ### Usage
-To connect `./1vpn`
+To connect `./1vpn` <br>
+To disconnect `sudo killall openvpn` - a bit heavy-handed, but it works
 
 ### How it works
 Expect is used to interact with your console given a pattern match. The `automate` file looks for "CHALLENGE: Enter 2FA Authentication" string and on that string the OTP will be injected from the 1password cli.
