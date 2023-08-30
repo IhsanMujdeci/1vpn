@@ -4,7 +4,7 @@
 ### Get Started
 Install `expect`
 - mac `brew install expext`
-- linux - look up for your package manger... sorry
+- Linux (Debian/Ubuntu) `sudo apt-get install expect`
 
 Install OpenVPN
 
