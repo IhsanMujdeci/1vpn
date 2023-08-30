@@ -20,7 +20,7 @@ Populate `auth.txt` with your username and password e.g.
 john.smith
 Very$ecurePa$$
 ```
-Populate config file with path to ovpn config file and name of your 1password item in your vault
+Populate `config` file with path to ovpn config file and name of your 1password item in your vault
 e.g.
 ```
 vpnLocation=~/somewhere/profile.ovpn
