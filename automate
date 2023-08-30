@@ -1,0 +1,11 @@
+#!/usr/bin/expect
+set 2fa [lindex $argv 0]
+set loc [lindex $argv 1]
+set timeout 60
+
+spawn openvpn --config "$loc" --auth-user-pass auth.txt
+
+expect "CHALLENGE: Enter 2FA Authenticato"
+send  "$2fa\r"
+
+expect EOF

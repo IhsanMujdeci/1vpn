@@ -1,0 +1,1 @@
+./getotp | sudo xargs ./automate

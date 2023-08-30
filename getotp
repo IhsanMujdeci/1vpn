@@ -1,0 +1,3 @@
+source config
+op item get "${onePassItem}" --otp
+echo $vpnLocation
