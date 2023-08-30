@@ -18,6 +18,10 @@ vpnLocation=~/somewhere/profile.ovpn
 onePassItem="OpenVPN Connect"
 ```
 
+You must have 1password desktop client installed <br>
+https://support.1password.com/get-the-apps/ <br>
+with CLI access <br> https://developer.1password.com/docs/cli/get-started/ <br>
+
 Your `onePassItem` entry for the VPN must have OTP code assigned to it.
 
 ### Usage
