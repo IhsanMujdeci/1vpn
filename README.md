@@ -1,5 +1,5 @@
 # 1vpn 
-1Password OpenVPN OTP Automation
+1Password OpenVPN 2FA Automation
 
 ### Get Started
 Install `expect`
