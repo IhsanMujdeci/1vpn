@@ -1,3 +1,2 @@
-source config
-op item get "${onePassItem}" --otp
-echo $vpnLocation
+#!/bin/bash
+op item get "$1" --otp

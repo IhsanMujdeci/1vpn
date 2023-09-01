@@ -1,1 +1,35 @@
-./getotp | sudo xargs ./automate
+#!/bin/bash
+
+kill=false
+
+while getopts ":kc:a:i:" opt; do
+  case "$opt" in
+    k) kill=true
+    ;;
+    c) config=$OPTARG
+    ;;
+    a) auth="$OPTARG"
+    ;;
+    i) item="$OPTARG"
+    ;;
+    \?) echo "Invalid option -$OPTARG" >&2
+    exit 1
+    ;;
+  esac
+
+  case $OPTARG in
+    -*) echo "Option $opt needs a valid argument"
+    exit 1
+    ;;
+  esac
+done
+
+if [ "$kill" = true ] ; then
+    sudo killall openvpn
+    echo "openvpn killed"
+    exit
+fi
+
+SCRIPTPATH="$(dirname "$0")"
+opt=$("$SCRIPTPATH"/getotp "$item")
+sudo "$SCRIPTPATH/1vpnsrc/automate" "$opt" "$config" "$auth"
