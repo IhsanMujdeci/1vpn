@@ -2,19 +2,20 @@
 1Password OpenVPN 2FA OTP Automation
 
 ### Get Started
-Install `expect`
-- mac `brew install expext`
+**Install** `expect`
+- mac - `brew install expext`
 - linux - look up for your package manger... sorry
 
-Install OpenVPN - 2.4 prefered, not tested on others.
+**Install OpenVPN** - 2.4 prefered, not tested on others.
 
-Install 1Password client <br>
+**Install 1Password client** <br>
 You must have a valid item entry in your vault that has OTP for the VPN you want to connect to <br>
 https://support.1password.com/get-the-apps/
 
-Enable 1Password CLI access <br> https://developer.1password.com/docs/cli/get-started/ <br>
+**Enable 1Password CLI access** <br> https://developer.1password.com/docs/cli/get-started/ <br>
 
-`-a` auth file
+**Create auth file** <br>
+Used for the `-a` option <br>
 From [OpenVPN Docs](https://openvpn.net/community-resources/reference-manual-for-openvpn-2-4/)
 ```
 --auth-user-pass [up]
@@ -33,7 +34,7 @@ P@$$W0RD123
 `-i` Item name onepassword <br>
 `-k` kill 
 
-To connect - `1vpn -a ~/bin/1vpnsrc/auth.txt -i "OpenVPN Connect" -c ~/bin/1vpnsrc/profile.ovpn` <br>
+To connect - `1vpn -a ~/some-path/auth.txt -i "OpenVPN Connect" -c ~/some-path/profile.ovpn` <br>
 To disconnect - `1vpn -k`
 
 ### How it works

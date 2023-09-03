@@ -32,4 +32,4 @@ fi
 
 SCRIPTPATH="$(dirname "$0")"
 opt=$("$SCRIPTPATH"/getotp "$item")
-sudo "$SCRIPTPATH/1vpnsrc/automate" "$opt" "$config" "$auth"
+sudo "$SCRIPTPATH/automate" "$opt" "$config" "$auth"
