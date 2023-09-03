@@ -38,4 +38,5 @@ To connect - `1vpn -a ~/some-path/auth.txt -i "OpenVPN Connect" -c ~/some-path/p
 To disconnect - `1vpn -k`
 
 ### How it works
-Expect is used to interact with your console given a pattern match. The `automate` file looks for "CHALLENGE: Enter 2FA Authentication" string and on that string the OTP will be injected from the 1password cli.
+In the `getotp` script 1passowrd cli grabs the OTP assigned to your vault item entry given in the `-i` command. <br>
+Then in the `automate` script expect is used to connect to OVPN via cli and will interact with your console on "CHALLENGE: Enter 2FA Authentication" pattern match and enter the OTP generated.
